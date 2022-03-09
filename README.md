@@ -104,3 +104,6 @@ GAN-Pokemon
 |- utils.py
 |     Utility functions.
 ```
+
+-----------------
+#### Best wishes and have fun!
