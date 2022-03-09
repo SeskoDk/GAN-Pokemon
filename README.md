@@ -15,11 +15,10 @@ The dataset has the following properties:
 </p>
 
 ### Resources
-[Generative Adversarial Nets](https://arxiv.org/pdf/1406.2661.pdf)\
-[Differentiable Augmentation for Data-Efficient GAN Training](https://arxiv.org/pdf/2006.10738.pdf) \
 [FID-Score](https://arxiv.org/pdf/1706.08500.pdf) \
 [FID-Implementation](https://github.com/mseitzer/pytorch-fid)
-
+[Generative Adversarial Nets](https://arxiv.org/pdf/1406.2661.pdf)\
+[Differentiable Augmentation for Data-Efficient GAN Training](https://arxiv.org/pdf/2006.10738.pdf) \
 ## Usage
 
 ### Preprocessing images
