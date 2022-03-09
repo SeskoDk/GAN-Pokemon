@@ -38,7 +38,7 @@ python -m train train_config.json
 The trained models can be found in the folder `trained_models`
 ### Generate images
 
-For generating new Pokèmon images, you can choose two modules.
+For generating new Pokèmon images, you can choose between two modules.
 **For single images**
 ```
 python -m generate_images
