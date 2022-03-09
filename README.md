@@ -66,6 +66,10 @@ The following folders are required:
 * Images: `src\pokemon_preprocessed`
 * New Images: `src\generated_images`
 
+To use the FID-Score the follwing package has to be installed
+```
+pip install pytorch-fid
+```
 
 To evaluate the Pokèmon images, you have to run
 ```
