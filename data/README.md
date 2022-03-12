@@ -1,4 +1,4 @@
-# Data-Folder Structure
+# Structure
 
 Save the `png-images` in the `pokemon_dataset` folder. All other ones will be created afterwards (automatically).
 
