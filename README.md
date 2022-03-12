@@ -23,7 +23,7 @@ The dataset has the following properties:
 
 ### Installing Packages
 
-For the packages, I assume that you are using miniconda. \
+For the packages use miniconda. \
 See [Miniconda](https://docs.conda.io/en/latest/miniconda.html).
 
 
