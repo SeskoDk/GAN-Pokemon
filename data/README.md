@@ -1,4 +1,4 @@
-# Src-Folder Structure
+# Data-Folder Structure
 
 Create the "pokemon_dataset" folder and save the png images in there. All other folders will be created afterwards (automatically).
 
