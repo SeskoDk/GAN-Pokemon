@@ -90,7 +90,7 @@ def train(G, D, lr, betas, num_epochs, dataloader, device, shape):
 def main():
     import argparse
     parser = argparse.ArgumentParser()
-    parser.add_argument("config_file", help="path to the config file", type=str)
+    parser.add_argument("--config_file", help="path to the config file", type=str, default="train_generator/train_config.json")
     args = parser.parse_args()
     config_file = args.config_file
 
