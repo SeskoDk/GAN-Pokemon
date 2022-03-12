@@ -101,32 +101,3 @@ python -m evaluation.pytorch-fid.src.pytorch_fid.fid_score --num-workers 2 src\g
 | Model | FID-Score |
 |:----------|:-------------|
 | 2022-03-08_15_49_59.pt |  173.13 |
-
-
-## Project-Structure
-```
-GAN-Pokemon
-|- generate_images.py
-|     Generates new single/grid images and saves them.
-|- train.py
-|     Train and saves the generator.
-|- train_config.json
-|     Configuration file containing the hyperparamters. 
-|- preprocessing.py
-|     Resizes the images to 128 x 128, deletes the alpha channel and saves them
-|- preprocessingClass.py
-|     Architecture of the dataset class
-|- DiffAugmentation.py
-|     Required for the augmentation process of the GAN.
-|- cnn.py
-|     CNN architecture of the generator and discriminator.
-|- mlp.py
-|     MPLP architecture of the generator and discriminator.the generator
-|- fid_score.py
-|     Calculates the score of the generator w.r.t the original dataset
-|- utils.py
-|     Utility functions.
-```
-
------------------
-#### Best wishes and have fun!
