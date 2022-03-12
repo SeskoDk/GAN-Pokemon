@@ -52,13 +52,13 @@ Install the packages via requirements.txt
 The images will be resized to `128 x 128 x 3` at the beginning
 
 ```
-python -m preprocessing.preprocessing
+python -m preprocessing.resize_images
 ```
 ### Train new generator
 A trained model is available under`trained models`.
 If you want to train a new generator, you have to execute this command
 ```
-python -m train train_config.json
+python -m train_generator.train train_generator\train_config.json
 ```
 The trained models can be found in the folder `trained_models`
 ### Generate images
@@ -66,7 +66,7 @@ The trained models can be found in the folder `trained_models`
 For generating new Pokèmon images, you can choose between two modules. \
 **For single images**
 ```
-python -m generate_images
+python -m image_gen.generate_images
 ```
 <p align="center">
   <img width="250" height="90" src="docs/imgs/figure3.png">
@@ -74,7 +74,7 @@ python -m generate_images
 
 **For grid images**
 ```
-python -m generate_grid_images
+python -m image_gen.generate_grid_images
 ```
 <p align="center">
   <img width="250" height="300" src="docs/imgs/figure2.png">
@@ -88,13 +88,8 @@ The images can be found under the paths:
 The FID-Score will be used to evalute the GAN. \
 It is important to create the same number of images as the original data. \
 The following folders are required:
-* Images: `data\pokemon_preprocessed`
-* New Images: `data\generated_images`
-
-To use the FID-Score the follwing package has to be installed
-```
-pip install pytorch-fid
-```
+* Images: `data\pokemon_preprocessed`, with the size of 819 images,
+* New Images: `data\generated_images`, with the size of 819 images.
 
 To evaluate the Pokèmon images, you have to run
 ```
