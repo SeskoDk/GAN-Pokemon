@@ -15,8 +15,8 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--height", help="height of the new image", type=int, default=128)
     parser.add_argument("--width",  help="width of the new image",  type=int, default=128)
-    parser.add_argument("--path_of_dataset", help="path of the original dataset", type=str, default="src/pokemon_dataset")
-    parser.add_argument("--path_of_preprocessed_pokemon", help="path of the preprocessed pokemon", type=str, default="src/pokemon_preprocessed")
+    parser.add_argument("--path_of_dataset", help="path of the original dataset", type=str, default="data/pokemon_dataset")
+    parser.add_argument("--path_of_preprocessed_pokemon", help="path of the preprocessed pokemon", type=str, default="data/pokemon_preprocessed")
     args = parser.parse_args()
 
     main(path_of_dataset=args.path_of_dataset,

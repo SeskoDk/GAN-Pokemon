@@ -1,6 +1,6 @@
 import json
 import torch
-import utils
+from . import utils
 import torchvision
 from tqdm import tqdm
 import torch.nn as nn
@@ -9,7 +9,7 @@ from torchvision import transforms
 from torch.utils.data import DataLoader
 from torch.utils.tensorboard import SummaryWriter
 from model.cnn import CNNGenerator, CNNDiscriminator
-from DatasetClass import PokemonDataset
+from .DatasetClass import PokemonDataset
 from diff_augmentation.DiffAugmentation import diff_augmentation
 
 

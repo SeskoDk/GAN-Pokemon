@@ -2,6 +2,7 @@ pip
 tqdm
 numpy
 pathlib
+tensorboard
 matplotlib
-pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch
 torchvision>=0.10.0
+pytorch-fid
