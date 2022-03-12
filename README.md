@@ -91,11 +91,6 @@ The following folders are required:
 * Images: `data\pokemon_preprocessed`, with the size of 819 images,
 * New Images: `data\generated_images`, with the size of 819 images.
 
-To use the FID-Score the follwing package has to be installed
-```
-pip install pytorch-fid
-```
-
 To evaluate the Pokèmon images, you have to run
 ```
 python -m evaluation.pytorch-fid.src.pytorch_fid.fid_score --num-workers 2 src\generated_images src\pokemon_preprocessed
