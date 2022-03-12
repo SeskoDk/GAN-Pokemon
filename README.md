@@ -81,15 +81,15 @@ python -m image_gen.generate_grid_images
 </p>
 
 The images can be found under the paths:
-* `data\generated_images`, with the size of 819 images,
-* `data\generated_grid_images`, with the size of 819 images.
+* `data\generated_images`,
+* `data\generated_grid_images`.
 
 ### Evaluation
 The FID-Score will be used to evalute the GAN. \
 It is important to create the same number of images as the original data. \
 The following folders are required:
-* Images: `data\pokemon_preprocessed`
-* New Images: `data\generated_images`
+* Images: `data\pokemon_preprocessed`, with the size of 819 images,
+* New Images: `data\generated_images`, with the size of 819 images.
 
 To use the FID-Score the follwing package has to be installed
 ```
