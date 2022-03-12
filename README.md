@@ -95,7 +95,7 @@ The following folders are required:
 
 To evaluate the Pokémon images, you have to run
 ```
-python -m evaluation.pytorch-fid.src.pytorch_fid.fid_score --num-workers 2 src\generated_images src\pokemon_preprocessed
+python -m evaluation.pytorch-fid.src.pytorch_fid.fid_score --num-workers 2 data\generated_images data\pokemon_preprocessed
 ```
 
 | Model | FID-Score |
