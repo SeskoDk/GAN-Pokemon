@@ -98,7 +98,7 @@ GAN-Pokemon
 |- cnn.py
 |     CNN architecture of the generator and discriminator.
 |- mlp.py
-|     MPLP architecture of the generator and discriminator.the generator
+|     MPLP architecture of the generator and discriminator
 |- fid_score.py
 |     Calculates the score of the generator w.r.t the original dataset
 |- utils.py
