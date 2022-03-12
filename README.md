@@ -63,7 +63,7 @@ python -m train_generator.train
 The trained models can be found in the folder `trained_models`
 ### Generate images
 
-For generating new Pokèmon images, you can choose between two modules. \
+For generating new Pokémon images, you can choose between two modules. \
 **For single images**
 ```
 python -m image_gen.generate_images
