@@ -80,7 +80,7 @@ python -m image_gen.generate_grid_images
   <img width="250" height="300" src="docs/imgs/figure2.png">
 </p>
 
-The images can be found under the paths:
+The images can be found under the following paths:
 * `data\generated_images`,
 * `data\generated_grid_images`.
 
@@ -91,7 +91,7 @@ The following folders are required:
 * Images: `data\pokemon_preprocessed`, with the size of 819 images,
 * New Images: `data\generated_images`, with the size of 819 images.
 
-To evaluate the Pokèmon images, you have to run
+To evaluate the Pokémon images, you have to run
 ```
 python -m evaluation.pytorch-fid.src.pytorch_fid.fid_score --num-workers 2 src\generated_images src\pokemon_preprocessed
 ```
