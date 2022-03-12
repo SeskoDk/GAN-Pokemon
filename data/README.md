@@ -3,7 +3,7 @@
 Save the `png-images` in the `pokemon_dataset` folder. All other ones will be created afterwards (automatically).
 
 ```
-src\
+data\
 |- pokemon_dataset
 |     Store the png-images of the pokemon dataset in this folder.
 |- pokemon_preprocessed
