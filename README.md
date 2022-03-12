@@ -66,7 +66,7 @@ The trained models can be found in the folder `trained_models`
 For generating new Pokèmon images, you can choose between two modules. \
 **For single images**
 ```
-python -m generate_images
+python -m image_gen.generate_images
 ```
 <p align="center">
   <img width="250" height="90" src="docs/imgs/figure3.png">
@@ -74,7 +74,7 @@ python -m generate_images
 
 **For grid images**
 ```
-python -m generate_grid_images
+python -m image_gen.generate_grid_images
 ```
 <p align="center">
   <img width="250" height="300" src="docs/imgs/figure2.png">
