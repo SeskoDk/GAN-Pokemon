@@ -81,8 +81,8 @@ python -m image_gen.generate_grid_images
 </p>
 
 The images can be found under the paths:
-* `data\generated_images`,
-* `data\generated_grid_images`.
+* `data\generated_images`, with the size of 819 images,
+* `data\generated_grid_images`, with the size of 819 images.
 
 ### Evaluation
 The FID-Score will be used to evalute the GAN. \
