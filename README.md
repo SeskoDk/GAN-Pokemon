@@ -39,6 +39,11 @@ Activate the new environment:
 conda activate myenv
 ```
 
+Install [pytorch](https://pytorch.org/get-started/locally/)
+```
+conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch
+```
+
 Install the packages via requirements.txt
 ```
  pip install -r requirements.txt
