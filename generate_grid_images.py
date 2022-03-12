@@ -21,7 +21,7 @@ def generate_grid_images(model, n_images, folder):
 if __name__ == "__main__":
     import argparse
     parser = argparse.ArgumentParser()
-    parser.add_argument("--path_grid_images", help="path of the generated grid images", type=str, default="src/generated_grid_images")
+    parser.add_argument("--path_grid_images", help="path of the generated grid images", type=str, default="data/generated_grid_images")
     parser.add_argument("--n_images", help="Number of generated images", type=int, default=10)
     parser.add_argument("--model", help="path of the trained generator", type=str,
                         default="trained_models/2022-03-08_15_49_59.pt")

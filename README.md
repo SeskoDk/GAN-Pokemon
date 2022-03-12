@@ -2,7 +2,7 @@
 This project focuses on generating new Pokémon images by using convolutional neural networks as a generator and discriminator. The GAN is trained with the original [Pokémon dataset](https://www.kaggle.com/kvpratama/pokemon-images-dataset). \
 For simplicity, the alpha channel was omitted so that only RGB images with a size of 128 x 128 were considered.
 
-**Remark:** The png images must be saved in the `src` folder as `pokemon_dataset`.
+**Remark:** The png images must be saved in the `data` folder as `pokemon_dataset`.
 
 The dataset has the following properties:
 * Total amount: 819 images
@@ -20,6 +20,29 @@ The dataset has the following properties:
 [Generative Adversarial Nets](https://arxiv.org/abs/1406.2661)\
 [Differentiable Augmentation for Data-Efficient GAN Training](https://arxiv.org/abs/2006.10738) 
 ## Usage
+
+### Installing Packages
+
+For the packages, I assume that you are using miniconda. \
+See [Miniconda](https://docs.conda.io/en/latest/miniconda.html).
+
+
+Use the Anaconda Prompt terminal for the following steps:
+```
+conda create --name myenv python=3.8.5 pip
+```
+
+When conda asks you to proceed `proceed ([y]/n)?`, type `y`:
+
+Activate the new environment: 
+```
+conda activate myenv
+```
+
+Install the packages via requirements.txt
+```
+ pip install -r requirements.txt
+```
 
 ### Preprocessing images
 
@@ -55,15 +78,15 @@ python -m generate_grid_images
 </p>
 
 The images can be found under the paths:
-* `src\generated_images`,
-* `src\generated_grid_images`.
+* `data\generated_images`,
+* `data\generated_grid_images`.
 
 ### Evaluation
 The FID-Score will be used to evalute the GAN. \
 It is important to create the same number of images as the original data. \
 The following folders are required:
-* Images: `src\pokemon_preprocessed`
-* New Images: `src\generated_images`
+* Images: `data\pokemon_preprocessed`
+* New Images: `data\generated_images`
 
 To use the FID-Score the follwing package has to be installed
 ```
@@ -98,7 +121,7 @@ GAN-Pokemon
 |- cnn.py
 |     CNN architecture of the generator and discriminator.
 |- mlp.py
-|     MPLP architecture of the generator and discriminator
+|     MPLP architecture of the generator and discriminator.the generator
 |- fid_score.py
 |     Calculates the score of the generator w.r.t the original dataset
 |- utils.py

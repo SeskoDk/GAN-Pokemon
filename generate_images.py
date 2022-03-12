@@ -20,8 +20,8 @@ def generate_new_images(model, folder, n_images):
 if __name__ == "__main__":
     import argparse
     parser = argparse.ArgumentParser()
-    parser.add_argument("--path_new_images", help="path of the generated images", type=str, default="src/generated_images")
-    parser.add_argument("--n_images", help="Number of generated images", type=int, default=819)
+    parser.add_argument("--path_new_images", help="path of the generated images", type=str, default="data/generated_images")
+    parser.add_argument("--n_images", help="Number of generated images", type=int, default=10)
     parser.add_argument("--model", help="path of the trained generator", type=str, default="trained_models/2022-03-08_15_49_59.pt")
     args = parser.parse_args()
 

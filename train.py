@@ -1,7 +1,6 @@
 import json
 import torch
 import utils
-import argparse
 import torchvision
 from tqdm import tqdm
 import torch.nn as nn
@@ -89,6 +88,7 @@ def train(G, D, lr, betas, num_epochs, dataloader, device, shape):
 
 
 def main():
+    import argparse
     parser = argparse.ArgumentParser()
     parser.add_argument("config_file", help="path to the config file", type=str)
     args = parser.parse_args()
