@@ -98,7 +98,7 @@ class CNNDiscriminator(nn.Sequential):
 
 
 
-class CNNGenerator(nn.Sequential):
+class CNNGenerator_2(nn.Sequential):
     def __init__(
         self,
         num_in_chan: int = 100,
@@ -150,11 +150,11 @@ class CNNGenerator(nn.Sequential):
         return nn.Sequential(*layers)
 
 
-gen = CNNGenerator(num_in_chan=100, num_out_chan=3, num_h_chan=16, target_size=128)
+# gen = CNNGenerator_2(num_in_chan=100, num_out_chan=3, num_h_chan=16, target_size=128)
 # print(gen)
-print(gen(torch.rand(1, 100, 1, 1)).shape)
+# print(gen(torch.rand(1, 100, 1, 1)).shape)
 
 # Ramp-up
-gen = CNNGenerator(num_in_chan=100, num_out_chan=3, num_h_chan=32, target_size=2048)
+# gen = CNNGenerator_2(num_in_chan=100, num_out_chan=3, num_h_chan=32, target_size=2048)
 # print(gen)
-print(gen(torch.rand(1, 100, 1, 1)).shape)
+# print(gen(torch.rand(1, 100, 1, 1)).shape)

@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da517f85-7917-49e6-bd7d-57c277b2a16e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/GAN-Pokemon.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/GAN-Pokemon.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/cnn.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/cnn.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/preprocessing/resize_images.py" beforeDir="false" afterPath="$PROJECT_DIR$/preprocessing/resize_images.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647106042570</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Change interpolation to bilinear and save adapt. cnn model">
+      <created>1647197127477</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1647197127477</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -136,6 +140,7 @@
     <MESSAGE value="Readme" />
     <MESSAGE value="init" />
     <MESSAGE value="Clean the project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Clean the project" />
+    <MESSAGE value="Change interpolation to bilinear and save adapt. cnn model" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change interpolation to bilinear and save adapt. cnn model" />
   </component>
 </project>
