@@ -4,7 +4,7 @@ from preprocessing.PreProcessingClass import PreProcessing
 
 def main(path_of_dataset, path_of_new_dataset, height, width):
     transform = transforms.Compose([
-        transforms.Resize(size=(height, width), interpolation=transforms.InterpolationMode.NEAREST)
+        transforms.Resize(size=(height, width), interpolation=transforms.InterpolationMode.BILINEAR)
     ])
     preprocess = PreProcessing(root_dir=path_of_dataset, new_dir=path_of_new_dataset, transform=transform, RGB=True)
     preprocess.pre_process_images()

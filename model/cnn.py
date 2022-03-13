@@ -1,4 +1,7 @@
+import math
+import torch
 import torch.nn as nn
+from typing import Type
 
 
 class CNNGenerator(nn.Sequential):
@@ -92,3 +95,66 @@ class CNNDiscriminator(nn.Sequential):
             nn.Sigmoid()
             # Output: B x 1 x 1 x 1
         )
+
+
+
+class CNNGenerator(nn.Sequential):
+    def __init__(
+        self,
+        num_in_chan: int = 100,
+        num_out_chan: int = 3,
+        num_h_chan=16,
+        target_size: int = 128,
+    ):
+        num_layers = int(math.log2(target_size))
+        in_sizes = [2 ** i for i in range(num_layers)]
+        in_channels = [num_in_chan] + [num_h_chan] * (num_layers - 1)
+        out_channels = [num_h_chan] * (num_layers - 1) + [num_out_chan]
+        norms = [True] * (num_layers - 1) + [False]
+        leaky_args = dict(negative_slope=0.2, inplace=True)
+        activations = [(nn.LeakyReLU, leaky_args)] * (num_layers - 1) + [(nn.Tanh, {})]
+        super().__init__(
+            *[
+                self._layer(inc, outc, ins, norm, act[0], **act[1])
+                for inc, outc, ins, norm, act in zip(
+                    in_channels, out_channels, in_sizes, norms, activations
+                )
+            ]
+        )
+
+    def _layer(
+        self,
+        num_in_chan: int,
+        num_out_chan: int,
+        in_size: int,
+        norm: bool = True,
+        act_klass: Type = nn.LeakyReLU,
+        **act_params
+    ) -> nn.Sequential:
+        """Returns a CNN-Generator standard layer block."""
+        layers = []
+        layers.append(
+            nn.ConvTranspose2d(
+                in_channels=num_in_chan,
+                out_channels=num_out_chan,
+                kernel_size=(4, 4),
+                stride=(2, 2),
+                padding=(1, 1),
+                bias=False,
+            )
+        )
+        if norm:
+            layers.append(nn.LayerNorm((num_out_chan, in_size * 2, in_size * 2)))
+        if act_klass is not None:
+            layers.append(act_klass(**act_params))
+        return nn.Sequential(*layers)
+
+
+gen = CNNGenerator(num_in_chan=100, num_out_chan=3, num_h_chan=16, target_size=128)
+# print(gen)
+print(gen(torch.rand(1, 100, 1, 1)).shape)
+
+# Ramp-up
+gen = CNNGenerator(num_in_chan=100, num_out_chan=3, num_h_chan=32, target_size=2048)
+# print(gen)
+print(gen(torch.rand(1, 100, 1, 1)).shape)
