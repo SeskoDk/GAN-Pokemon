@@ -61,7 +61,7 @@ If you want to train a new generator, you have to execute this command
 python -m pokemon.generator.train
 ```
 The hyperparameters are in the "train_config.json" file.\
-The trained models can be found in the folder `trained_models`
+The trained models can be found in the folder `pokemon\trained_models`
 ### Generate images
 
 For generating new Pokémon images, you can choose between two modules. \
