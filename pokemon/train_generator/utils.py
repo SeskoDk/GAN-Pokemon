@@ -4,8 +4,7 @@ import datetime
 import numpy as np
 from PIL import Image
 from pathlib import Path
-from model import cnn
-
+from ..model import cnn
 
 def create_new_folder(dir):
     if dir.exists():
