@@ -24,7 +24,7 @@ def saveModel(model):
 
 def loadModel(modelPath: str):
     model = cnn.CNNGenerator()
-    model.load_state_dict(torch.load(modelPath))
+    model.load_state_dict(torch.load(modelPath, map_location=torch.device('cuda' if (torch.cuda.is_available()) else 'cpu')))
     model.eval()
     return model
 
