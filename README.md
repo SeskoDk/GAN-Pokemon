@@ -52,22 +52,22 @@ Install the packages via requirements.txt
 The images will be resized to `128 x 128 x 3` at the beginning
 
 ```
-python -m preprocessing.resize_images
+python -m pokemon.resize_images
 ```
 ### Train new generator
-A trained model is available under`trained models`.
+A trained model is available under`pokemon\trained models`.
 If you want to train a new generator, you have to execute this command
 ```
-python -m train_generator.train
+python -m pokemon.generator.train
 ```
 The hyperparameters are in the "train_config.json" file.\
-The trained models can be found in the folder `trained_models`
+The trained models can be found in the folder `pokemon\trained_models`
 ### Generate images
 
 For generating new Pokémon images, you can choose between two modules. \
 **For single images**
 ```
-python -m image_gen.generate_images
+python -m pokemon.generate_images
 ```
 <p align="center">
   <img width="250" height="90" src="docs/imgs/figure3.png">
@@ -75,26 +75,26 @@ python -m image_gen.generate_images
 
 **For grid images**
 ```
-python -m image_gen.generate_grid_images
+python -m pokemon.generate_grid_images
 ```
 <p align="center">
   <img width="250" height="300" src="docs/imgs/figure2.png">
 </p>
 
 The images can be found under the following paths:
-* `data\generated_images`,
-* `data\generated_grid_images`.
+* `pokemon\data\generated_images`,
+* `pokemon\data\generated_grid_images`.
 
 ### Evaluation
 The FID-Score will be used to evalute the GAN. \
 It is important to create the same number of images as the original data. \
 The following folders are required:
-* Images: `data\pokemon_preprocessed`, with the size of 819 images,
-* New Images: `data\generated_images`, with the size of 819 images.
+* Images: `pokemon\data\pokemon_preprocessed`, with the size of 819 images,
+* New Images: `pokemon\data\generated_images`, with the size of 819 images.
 
 To evaluate the Pokémon images, you have to run
 ```
-python -m evaluation.pytorch-fid.src.pytorch_fid.fid_score --num-workers 2 data\generated_images data\pokemon_preprocessed
+python -m pokemon.evaluation.pytorch-fid.src.pytorch_fid.fid_score --num-workers 2 pokemon\data\generated_images pokemon\data\pokemon_preprocessed
 ```
 
 | Model | FID-Score |
