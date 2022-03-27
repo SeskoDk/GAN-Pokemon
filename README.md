@@ -52,7 +52,7 @@ Install the packages via requirements.txt
 The images will be resized to `128 x 128 x 3` at the beginning
 
 ```
-python -m preprocessing.resize_images
+python -m pokemon.resize_images
 ```
 ### Train new generator
 A trained model is available under`trained models`.
