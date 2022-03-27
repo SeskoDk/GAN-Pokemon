@@ -58,7 +58,7 @@ python -m preprocessing.resize_images
 A trained model is available under`trained models`.
 If you want to train a new generator, you have to execute this command
 ```
-python -m train_generator.train
+python -m pokemon.generator.train
 ```
 The hyperparameters are in the "train_config.json" file.\
 The trained models can be found in the folder `trained_models`
