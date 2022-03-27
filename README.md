@@ -75,7 +75,7 @@ python -m pokemon.generate_images
 
 **For grid images**
 ```
-python -m image_gen.generate_grid_images
+python -m pokemon.generate_grid_images
 ```
 <p align="center">
   <img width="250" height="300" src="docs/imgs/figure2.png">
