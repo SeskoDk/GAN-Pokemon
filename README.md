@@ -55,7 +55,7 @@ The images will be resized to `128 x 128 x 3` at the beginning
 python -m pokemon.resize_images
 ```
 ### Train new generator
-A trained model is available under`trained models`.
+A trained model is available under`pokemon\trained models`.
 If you want to train a new generator, you have to execute this command
 ```
 python -m pokemon.generator.train
