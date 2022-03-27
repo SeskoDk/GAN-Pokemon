@@ -1,5 +1,5 @@
 {
-  "root_dir" : "data/pokemon_preprocessed",
+  "root_dir" : "pokemon/data/pokemon_preprocessed",
   "batch_size" : 16,
   "num_epochs" : 5000,
   "num_workers" : 0,

@@ -1,9 +1,9 @@
-from train_generator import utils
 import torch
 import torchvision
 from tqdm import tqdm
 from pathlib import Path
 import matplotlib.pyplot as plt
+from .generator import utils
 
 
 def generate_grid_images(model, n_images, folder):
@@ -21,16 +21,18 @@ def generate_grid_images(model, n_images, folder):
 if __name__ == "__main__":
     import argparse
     parser = argparse.ArgumentParser()
-    parser.add_argument("--path_grid_images", help="path of the generated grid images", type=str, default="data/generated_grid_images")
+    parser.add_argument("--path_grid_images", help="path of the generated grid images", type=str,
+                        default="pokemon/data/generated_grid_images")
     parser.add_argument("--n_images", help="Number of generated images", type=int, default=10)
     parser.add_argument("--model", help="path of the trained generator", type=str,
-                        default="trained_models/2022-03-08_15_49_59.pt")
+                        default="pokemon/trained_models/2022-03-08_15_49_59.pt")
     args = parser.parse_args()
 
     path_grid_images = Path(args.path_grid_images)
     model_path = args.model
     n_images = args.n_images
 
-    generator = utils.loadModel(model_path)
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    generator = utils.loadModel(model_path, device)
 
     generate_grid_images(model=generator, folder=path_grid_images, n_images=n_images)

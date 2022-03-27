@@ -4,7 +4,7 @@ import datetime
 import numpy as np
 from PIL import Image
 from pathlib import Path
-from ..model import cnn
+from ..model.cnn import CNNGenerator
 
 def create_new_folder(dir):
     if dir.exists():
@@ -21,9 +21,9 @@ def saveModel(model):
     torch.save(model.state_dict(), modelDir / modelName)
 
 
-def loadModel(modelPath: str):
-    model = cnn.CNNGenerator()
-    model.load_state_dict(torch.load(modelPath, map_location=torch.device('cuda' if (torch.cuda.is_available()) else 'cpu')))
+def loadModel(modelPath: str, device: torch.device):
+    model = CNNGenerator()
+    model.load_state_dict(torch.load(modelPath, map_location=device))
     model.eval()
     return model
 

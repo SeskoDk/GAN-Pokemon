@@ -4,6 +4,7 @@ from PIL import Image
 from tqdm import tqdm
 from pathlib import Path
 
+
 class PreProcessing():
     def __init__(self, root_dir: str, new_dir: str, transform=None, RGB=True):
         self.root_dir = root_dir
@@ -36,3 +37,4 @@ class PreProcessing():
             image = Image.fromarray(image)
             image = self.transform(image)
             image.save(path)
+        print("Done!")

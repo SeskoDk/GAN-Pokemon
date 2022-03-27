@@ -3,7 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="da517f85-7917-49e6-bd7d-57c277b2a16e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pokemon/train_generator/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/pokemon/train_generator/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pokemon/PreProcessingClass.py" beforeDir="false" afterPath="$PROJECT_DIR$/pokemon/PreProcessingClass.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pokemon/generate_grid_images.py" beforeDir="false" afterPath="$PROJECT_DIR$/pokemon/generate_grid_images.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pokemon/generate_images.py" beforeDir="false" afterPath="$PROJECT_DIR$/pokemon/generate_images.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pokemon/resize_images.py" beforeDir="false" afterPath="$PROJECT_DIR$/pokemon/resize_images.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pokemon/train_generator/DatasetClass.py" beforeDir="false" afterPath="$PROJECT_DIR$/pokemon/generator/DatasetClass.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pokemon/train_generator/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/pokemon/generator/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pokemon/train_generator/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/pokemon/generator/train.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pokemon/train_generator/train_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/pokemon/generator/train_config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pokemon/train_generator/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/pokemon/generator/utils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +38,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../nlp" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">

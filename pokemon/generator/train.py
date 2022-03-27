@@ -8,9 +8,9 @@ import torch.optim as optim
 from torchvision import transforms
 from torch.utils.data import DataLoader
 from torch.utils.tensorboard import SummaryWriter
-from model.cnn import CNNGenerator, CNNDiscriminator
+from ..model.cnn import CNNGenerator, CNNDiscriminator
 from .DatasetClass import PokemonDataset
-from diff_augmentation.DiffAugmentation import diff_augmentation
+from ..diff_augmentation.DiffAugmentation import diff_augmentation
 
 
 def train(G, D, lr, betas, num_epochs, dataloader, device, shape):
@@ -90,7 +90,7 @@ def train(G, D, lr, betas, num_epochs, dataloader, device, shape):
 def main():
     import argparse
     parser = argparse.ArgumentParser()
-    parser.add_argument("--config_file", help="path to the config file", type=str, default="train_generator/train_config.json")
+    parser.add_argument("--config_file", help="path of the config file", type=str, default="pokemon/generator/train_config.json")
     args = parser.parse_args()
     config_file = args.config_file
 
